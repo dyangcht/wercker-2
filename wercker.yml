@@ -7,7 +7,7 @@ dev:
     - script:
       name: gradle bootRun
       code: |
-        ./gradlew -Dhttps.proxyHost=www-proxy.sg.oracle.com -Dhttps.proxyPort=80 -Dhttp.proxyHost=www-proxy.sg.oracle.com -Dhttp.proxyPort=80 bootRun
+        ./gradlew bootRun
 
 # Build definition
 build:
@@ -17,4 +17,4 @@ build:
     - script:
         name: gradle build
         code: |
-          ./gradlew -Dhttps.proxyHost=www-proxy.sg.oracle.com -Dhttps.proxyPort=80 -Dhttp.proxyHost=www-proxy.sg.oracle.com -Dhttp.proxyPort=80 --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
+          ./gradlew --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
